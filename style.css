@@ -1,0 +1,270 @@
+*{
+    margin:0;
+    padding:0;
+}
+html{
+    scroll-behavior: smooth;
+}
+#navbar{
+    display:flex;
+    align-items: center;
+    position:sticky;
+    top:0;
+
+
+
+}
+#logo{
+    margin:34px 45px;
+
+}
+#logo img{
+  
+    height: 68px;
+    margin: -30px -12px;
+    border-radius: 50%; 
+
+}
+/* #navbar{
+    position: sticky;
+    /* position: absolute;
+    top:0; */
+/* } */ 
+#navbar ul{
+    display:flex;
+}
+#navbar:before{
+    /* for hover */
+    content: " ";
+    background-color: red;
+    position: absolute;
+    height:100%;
+    width:100%;
+    /* now use z index so content upr aa jaye ga */
+    z-index:-1;
+    opacity:0.9;
+}
+#navbar ul li{
+    /* all those small dot remove by doing liststyle none */
+    list-style: none;  
+    font-size: 1.5rem;
+}
+#navbar ul li a{
+    /* display block coz by default inline hoti so we can use padding and margin here */
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    color:white;
+}
+#navbar ul li a:hover{
+    color:black;
+    background-color: white;
+
+
+}
+
+#home{
+    /* all will move into row through flexbox */
+    display:flex;
+    /* through flex-direction column move into downward */
+    flex-direction: column;
+    padding:0px 120px;
+    align-items: center;
+    color:white;
+    height:450px;
+}
+#home::before{
+      /* for hover */
+      content: " ";
+      background-image:url('0.jpg');
+      background-repeat:no-repeat;
+      background-size:100% 100%;
+      background-attachment: fixed;
+      position: absolute;
+      height:400px;
+      width:100%;
+      /* now use z index so content upr aa jaye ga */
+      z-index:-1;
+      opacity:0.99;
+}
+#home h1{
+    color:white;
+    text-align: center;
+}
+#home h1 p{
+    color:white;
+    text-align: center;
+    font-size:1.5rem;
+}
+.h-primary{
+    font-size:3.8rem;
+    padding:65px 50px;
+}
+.h-secondary{
+    font-size:3.8rem;
+    padding:26px;
+}
+.btn{
+    padding:6px 20px;
+    border:2px solid white;
+    background-color:red;
+    color:white;
+    margin:20px;
+    font-size:1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:hover{
+    color:red;
+    background-color: wheat;
+}
+.center{
+    text-align:center;
+    
+}
+
+#services{
+    margin:15px;
+    display:flex;
+    /* border:2px solid brown; */
+}
+.box{
+    border:2px solid rgb(36, 33, 33);
+    padding:34px;
+    margin:3px 6px;
+    border-radius: 28px;
+    background:rgb(245, 234, 234);
+}
+.box img{
+    height:200px;
+    margin:auto;
+    display:block;
+    border-radius:9%;
+}
+#clients-section{
+    
+    position: relative;
+}
+#clients{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#client-item{
+    padding: 104px 34px;
+}
+#clients img{
+    height:164px;
+    padding:34px;
+    border-radius: 50%;
+}
+#client-section::before{
+    content: " ";
+    background:url('c6.jpeg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    
+    width:100%;
+    height:500px;
+    z-index:-1;
+    opacity: 1;
+    
+}
+#contact{
+    position: relative;
+}
+#contact::before{
+    content:" ";
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    opacity: 0.49;
+    background:url("1.jpeg")  ;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+    background-attachment: fixed;
+    
+
+   
+}
+#contact-box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input,
+#contact-box textarea{
+    width:111%;
+    padding:1rem;
+    margin:10px 3px;
+    border-radius: 10px;
+}
+#contact-box form{
+    width:40%;
+}
+#contact-box label{
+    font-size:1.3rem;
+}
+footer{
+    background-color:black;
+    color:white;
+    padding:20px 10px;
+}
+
+@media screen and (max-width:1200px)
+{
+    #navbar{
+        flex-direction: column;
+    }
+    #navbar ul li a{
+        font-size:1rem;
+        padding:0px 7px;
+    }
+    #home{
+        height:560px;
+        flex-direction: column;
+    }
+    #home::before{
+        height:510px;
+    }
+    #home p{
+        font-size:13px;
+    }
+    .h-primary{
+        font-size:26px;
+    }
+
+    #services{
+        flex-direction:column;
+    }
+    .box{
+        padding:10px;
+        margin:2px 0px;
+        margin-bottom:40px;
+    }
+    .box img{
+        height:180px;
+    }
+
+    .btn{
+        font-size:13px;
+        padding:4px 8px;
+    }
+    #clients{
+        flex-wrap:wrap;
+    }
+    #clients img{
+        width:60px;
+        /* padding:56px; */
+        height: 60px;
+    }
+    #contact-box form{
+        width:40%;
+    }
+    
+}
